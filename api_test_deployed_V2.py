@@ -118,7 +118,7 @@ def index():
 
 @app.post("/predict_mask/")
 async def predict_mask(file: UploadFile = File()):
-# async def predict_mask(file: UploadFile = File(...)):
+
     # Get the original image with (1, 256, 256, 3) shape
     contents = await file.read()
     conversion_np_array = np.fromstring(contents, np.uint8)
