@@ -1,0 +1,1 @@
+gunicorn -w 1 -k uvicorn.workers.UvicornWorker --timeout 1000 api_test_deployed_V2:app
