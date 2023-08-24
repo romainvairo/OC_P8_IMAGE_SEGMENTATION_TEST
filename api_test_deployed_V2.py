@@ -149,35 +149,6 @@ async def predict_mask(file: UploadFile = File()):
     # Return a Response in JSON format
     return JSONResponse(content={"prediction": mask})
 
-
-
-
-
-
-
-
-
-
-# @app.post("/predict_mask/")
-# async def predict_mask(file: UploadFile = File(...)):
-
-#     # Get the original image with (1, 256, 256, 3) shape
-#     contents = await file.read()
-#     conversion_np_array = np.fromstring(contents, np.uint8)
-#     img = cv2.imdecode(conversion_np_array, cv2.IMREAD_COLOR)
-#     img_resized = cv2.resize(img, (256,256))
-#     img = img_resized.reshape(1,256,256,3)
-  
-#     img = np.squeeze(img)
-  
-#     # Encode original image to PNG format
-#     _, buffer_image = cv2.imencode('.png', img)
-
-#     # Encode original image in base64 format
-#     original_image = base64.b64encode(buffer_image).decode("utf-8")
-
-#     # Return a Response in JSON format
-#     return JSONResponse(content={"image" : original_image})
 # --------------------------------------------------------------------------
 
 
