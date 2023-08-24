@@ -117,7 +117,6 @@ def index():
     '''
     return {'message': 'Bonjour, ceci est un test'}
 
-
 @app.post("/predict_mask/")
 async def predict_mask(file: UploadFile = File()):
 
