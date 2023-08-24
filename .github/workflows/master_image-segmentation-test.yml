@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'image-segmentation-test'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_44001E44C0F64FEDB45A99F4D2847759 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C4AB20A821934833B06B6CBD564A78D0 }}
