@@ -21,6 +21,7 @@ from tensorflow.keras import backend as K
 
 
 # ----------------------------- Functions ----------------------------------
+
 def dice_coeff(y_true, y_pred):
     """ Dice coefficient
 
@@ -88,7 +89,6 @@ def segmentation_color(real_mask):
     real_mask = real_mask.astype(np.uint8)
     return real_mask
 
-
 # --------------------------------------------------------------------------
 
 
@@ -102,6 +102,8 @@ app = FastAPI()
 
 
 
+
+# ------------------------------ Model -------------------------------------
 
 model = load_model("unet_mini_not_augmented.h5", custom_objects={'dice_coeff' : dice_coeff,
 'mean_iou' : OneHotMeanIoU(num_classes=8, name='mean_iou'), 'IoU' : IoU}, compile = True)
